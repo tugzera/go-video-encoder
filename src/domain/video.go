@@ -1,9 +1,16 @@
 package domain
 
-import "github.com/asaskevich/govalidator"
+import (
+	"time"
+
+	"github.com/asaskevich/govalidator"
+)
 
 type Video struct {
-	id string `valid:"uuid"`
+	ID          string    `valid:"uuid"`
+	ResourceID  string    `valid:"notnull"`
+	FilePath    string    `valid:"notnull"`
+	CreatedDate time.Time `valid:"-"`
 }
 
 func init() {
