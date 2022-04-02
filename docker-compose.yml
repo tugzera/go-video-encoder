@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  app:
+    container_name: "go-encoder"
+    build: .
+    volumes: 
+    - ./src:/go/src
